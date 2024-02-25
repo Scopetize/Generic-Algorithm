@@ -32,7 +32,12 @@ for i in range(10000):
         rankedsolutions.reverse()
         print(f"===== gen {i} best solution ====")
         print(rankedsolutions[0])
+
+        if rankedsolutions[0][0] > 999:
+            break
         bestsolutions = rankedsolutions[:100]
+
+
         elements = []
     for s in bestsolutions: 
         elements.append(s[1][0])
